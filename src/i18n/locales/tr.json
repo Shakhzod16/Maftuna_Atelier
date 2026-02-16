@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "products": "Ürünler",
+    "marketplace": "Mağazalar",
+    "about": "Hakkımızda",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title": "Kadın Terzisi — Modern ve Ulusal Uyum",
+    "subtitle": "Güzellikle örülmüş zarafet. Sizin için sevgiyle kıyafet yaratıyoruz.",
+    "cta_products": "Ürünler",
+    "cta_contact": "İletişim"
+  },
+  "features": {
+    "title": "Neden biz?",
+    "national": "Ulusal ve Modern Uyum",
+    "national_desc": "Geleneksel desenleri modern tarzla harmanlayan kıyafetler.",
+    "custom": "Sipariş Üzerine Dikim",
+    "custom_desc": "Her parça ölçülerinize göre dikilir.",
+    "handmade": "El Yapımı Detaylar",
+    "handmade_desc": "Her dikiş özenli el işçiliğiyle yapılır.",
+    "individual": "Bireysel Yaklaşım",
+    "individual_desc": "Her müşteriye özel ilgi ve özen."
+  },
+  "products": {
+    "title": "Ürünler",
+    "all": "Tümü",
+    "national": "Ulusal",
+    "dresses": "Elbiseler",
+    "modern": "Modern",
+    "custom_cat": "Sipariş",
+    "search": "Ara...",
+    "sort": "Sırala",
+    "sort_default": "Varsayılan",
+    "sort_price_asc": "Fiyat: düşük → yüksek",
+    "sort_price_desc": "Fiyat: yüksek → düşük",
+    "detail": "Detaylar",
+    "price_label": "UZS"
+  },
+  "marketplace": {
+    "title": "Mağazalarda Bulun",
+    "subtitle": "Ürünlerimizi bu platformlarda da satın alabilirsiniz.",
+    "visit": "Ziyaret Et"
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "text": "Maftuna Atelier, modern ve ulusal kadın giyimi konusunda uzmanlaşmış bir terzilik atölyesidir. Her kıyafeti sevgi ve ustalıkla hazırlıyoruz.",
+    "experience": "Deneyim",
+    "experience_val": "5+ yıl",
+    "custom_orders": "Siparişler",
+    "custom_orders_val": "500+",
+    "handmade_work": "El Yapımı",
+    "handmade_work_val": "100%"
+  },
+  "contact": {
+    "title": "İletişim",
+    "phone": "Telefon",
+    "telegram": "Telegram",
+    "instagram": "Instagram",
+    "email": "E-posta",
+    "address": "Adres",
+    "address_val": "Buhara bölgesi, Romitan ilçesi, Gazli MFY, Emir Timur caddesi",
+    "map": "Haritada Gör",
+    "form_name": "Adınız",
+    "form_phone": "Telefonunuz",
+    "form_message": "Mesajınız",
+    "form_send": "Gönder",
+    "form_success": "Mesaj başarıyla gönderildi!"
+  },
+  "footer": {
+    "desc": "Modern ve ulusal kadın giyimi konusunda uzmanlaşmış terzilik atölyesi.",
+    "links": "Sayfalar",
+    "social": "Sosyal Medya"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "products": "Mahsulotlar",
+    "marketplace": "Do'konlar",
+    "about": "Biz haqimizda",
+    "contact": "Bog'lanish"
+  },
+  "hero": {
+    "title": "Ayollar kiyimi tikuvchisi — zamonaviy va milliy uyg'unligi",
+    "subtitle": "Go'zallik iplarida nafislik. Biz siz uchun mehr bilan libos yaratamiz.",
+    "cta_products": "Mahsulotlar",
+    "cta_contact": "Bog'lanish"
+  },
+  "features": {
+    "title": "Nima uchun biz?",
+    "national": "Milliy va zamonaviy uyg'unligi",
+    "national_desc": "An'anaviy naqshlar va zamonaviy uslub birlashgan liboslar.",
+    "custom": "Buyurtma asosida tikuv",
+    "custom_desc": "Har bir libos sizning o'lchamingizga mos ravishda tayyorlanadi.",
+    "handmade": "Qo'lda ishlangan detallar",
+    "handmade_desc": "Har bir tikuv nafis qo'l mehnati bilan yaratiladi.",
+    "individual": "Individual yondashuv",
+    "individual_desc": "Har bir mijozga alohida e'tibor va g'amxo'rlik."
+  },
+  "products": {
+    "title": "Mahsulotlar",
+    "all": "Hammasi",
+    "national": "Milliy",
+    "dresses": "Ko'ylaklar",
+    "modern": "Zamonaviy",
+    "custom_cat": "Buyurtma",
+    "search": "Qidirish...",
+    "sort": "Saralash",
+    "sort_default": "Standart",
+    "sort_price_asc": "Narx: past → yuqori",
+    "sort_price_desc": "Narx: yuqori → past",
+    "detail": "Batafsil",
+    "price_label": "so'm"
+  },
+  "marketplace": {
+    "title": "Do'konlarda toping",
+    "subtitle": "Bizning mahsulotlarimizni quyidagi do'konlarda ham sotib olishingiz mumkin.",
+    "visit": "Tashrif buyurish"
+  },
+  "about": {
+    "title": "Biz haqimizda",
+    "text": "Maftuna Atelier — bu zamonaviy va milliy ayollar kiyimlarini yaratishga ixtisoslashgan tikuvchilik ustaxonasi. Biz har bir libosni mehr va mahorat bilan tayyorlaymiz, an'anaviy naqshlarni zamonaviy uslub bilan uyg'unlashtirganmiz.",
+    "experience": "Tajriba",
+    "experience_val": "5+ yil",
+    "custom_orders": "Buyurtmalar",
+    "custom_orders_val": "500+",
+    "handmade_work": "Qo'l ishi",
+    "handmade_work_val": "100%"
+  },
+  "contact": {
+    "title": "Bog'lanish",
+    "phone": "Telefon",
+    "telegram": "Telegram",
+    "instagram": "Instagram",
+    "email": "Elektron pochta",
+    "address": "Manzil",
+    "address_val": "Buxoro viloyati, Romitan tuman, Gazli MFY, Amir Temur ko'chasi",
+    "map": "Xaritada ko'rish",
+    "form_name": "Ismingiz",
+    "form_phone": "Telefon raqamingiz",
+    "form_message": "Xabaringiz",
+    "form_send": "Yuborish",
+    "form_success": "Xabar muvaffaqiyatli yuborildi!"
+  },
+  "footer": {
+    "desc": "Zamonaviy va milliy ayollar kiyimlarini yaratishga ixtisoslashgan tikuvchilik ustaxonasi.",
+    "links": "Sahifalar",
+    "social": "Ijtimoiy tarmoqlar"
+  }
+}

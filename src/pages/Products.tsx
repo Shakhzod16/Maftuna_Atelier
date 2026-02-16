@@ -1,113 +1,116 @@
 import { useState, useMemo } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { products, categoryKeys } from '@/data/products';
-import { Search, ChevronDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import { Search } from 'lucide-react';
+import { products } from '@/data/products';
+import ProductCard from '@/components/ProductCard';
+
+const categories = ['all', 'national', 'dresses', 'modern', 'custom'] as const;
+type Category = (typeof categories)[number];
 
 const Products = () => {
-  const { lang, t } = useLanguage();
-  const [filter, setFilter] = useState('all');
-  const [search, setSearch] = useState('');
-  const [sort, setSort] = useState('newest');
-  const [hovered, setHovered] = useState<number | null>(null);
+  const { t, i18n } = useTranslation();
 
-  const categoryLabels: Record<string, string> = {
-    all: t.products.all,
-    evening: t.categories.evening,
-    business: t.categories.business,
-    bridal: t.categories.bridal,
-    casual: t.categories.casual,
-  };
+  const [category, setCategory] = useState<Category>('all');
+  const [search, setSearch] = useState('');
+  const [sort, setSort] = useState<'default' | 'price_asc' | 'price_desc'>('default');
 
   const filtered = useMemo(() => {
-    let list = [...products];
-    if (filter !== 'all') list = list.filter((p) => p.category === filter);
-    if (search) list = list.filter((p) => p.name[lang]?.toLowerCase().includes(search.toLowerCase()));
-    if (sort === 'priceAsc') list.sort((a, b) => a.price - b.price);
-    else if (sort === 'priceDesc') list.sort((a, b) => b.price - a.price);
-    else list.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-    return list;
-  }, [filter, search, sort, lang]);
+    let result = products;
+
+    // ✅ category filter
+    if (category !== 'all') {
+      result = result.filter((p) => p.category === category);
+    }
+
+    // ✅ search — endi tarjima qilingan matn bo‘yicha qidiradi
+    if (search.trim()) {
+      const q = search.trim().toLowerCase();
+
+      result = result.filter((p) => {
+        const name = t(p.nameKey).toLowerCase();
+        const desc = t(p.descKey).toLowerCase();
+        return name.includes(q) || desc.includes(q);
+      });
+    }
+
+    // ✅ sort
+    if (sort === 'price_asc') {
+      result = [...result].sort((a, b) => (a.price ?? 0) - (b.price ?? 0));
+    } else if (sort === 'price_desc') {
+      result = [...result].sort((a, b) => (b.price ?? 0) - (a.price ?? 0));
+    }
+
+    return result;
+    // ✅ i18n.language qo‘shildi: til o‘zgarsa useMemo qayta hisoblaydi
+  }, [category, search, sort, t, i18n.language]);
 
   return (
-    <div className="container mx-auto px-6 py-12">
-      <h1 className="font-serif text-4xl lg:text-5xl font-light text-foreground mb-10">{t.products.title}</h1>
+    <section className="section-padding pt-28 bg-background min-h-screen">
+      <div className="container-atelier">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-12"
+        >
+          <h1 className="font-heading text-4xl md:text-5xl font-semibold text-foreground mb-4">
+            {t('products.title')}
+          </h1>
+          <div className="gold-divider" />
+        </motion.div>
 
-      {/* Filters */}
-      <div className="flex flex-col md:flex-row gap-4 mb-10 items-start md:items-center justify-between">
-        <div className="flex flex-wrap gap-2">
-          {categoryKeys.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setFilter(cat)}
-              className={`px-4 py-1.5 text-sm rounded border transition-colors ${
-                filter === cat ? 'bg-primary text-primary-foreground border-primary' : 'border-border text-muted-foreground hover:text-foreground hover:border-foreground'
-              }`}
-            >
-              {categoryLabels[cat]}
-            </button>
-          ))}
-        </div>
-        <div className="flex gap-3 items-center">
-          <div className="relative">
-            <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
-            <input
-              type="text"
-              placeholder={t.products.search}
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="pl-9 pr-4 py-2 text-sm bg-background border border-border rounded focus:outline-none focus:border-primary w-52"
-            />
+        {/* Filters */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10">
+          <div className="flex flex-wrap gap-2">
+            {categories.map((c) => (
+              <button
+                key={c}
+                onClick={() => setCategory(c)}
+                className={`pill-tab ${category === c ? 'pill-tab-active' : 'pill-tab-inactive'}`}
+              >
+                {t(`products.categories.${c}`)}
+              </button>
+            ))}
           </div>
-          <div className="relative">
+
+          <div className="flex items-center gap-3">
+            <div className="relative">
+              <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+              <input
+                type="text"
+                placeholder={t('products.search')}
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="pl-9 pr-4 py-2 rounded-full bg-secondary text-sm text-foreground placeholder:text-muted-foreground outline-none focus:ring-2 focus:ring-accent/30 transition-all w-48"
+              />
+            </div>
+
             <select
               value={sort}
-              onChange={(e) => setSort(e.target.value)}
-              className="appearance-none px-4 py-2 pr-8 text-sm bg-background border border-border rounded focus:outline-none focus:border-primary cursor-pointer"
+              onChange={(e) => setSort(e.target.value as any)}
+              className="px-4 py-2 rounded-full bg-secondary text-sm text-foreground outline-none cursor-pointer"
             >
-              <option value="newest">{t.products.newest}</option>
-              <option value="priceAsc">{t.products.priceAsc}</option>
-              <option value="priceDesc">{t.products.priceDesc}</option>
+              <option value="default">{t('products.sort_default')}</option>
+              <option value="price_asc">{t('products.sort_price_asc')}</option>
+              <option value="price_desc">{t('products.sort_price_desc')}</option>
             </select>
-            <ChevronDown size={14} className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" />
           </div>
         </div>
-      </div>
 
-      {/* Products grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filtered.map((product) => (
-          <div
-            key={product.id}
-            className="group border border-border rounded overflow-hidden bg-background hover:border-primary transition-colors"
-            onMouseEnter={() => setHovered(product.id)}
-            onMouseLeave={() => setHovered(null)}
-            onTouchStart={() => setHovered(product.id === hovered ? null : product.id)}
-          >
-            <div className="relative aspect-[3/4] overflow-hidden">
-              <img
-                src={hovered === product.id ? product.img2 : product.img1}
-                alt={product.name[lang]}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors flex items-center justify-center">
-                <span className="opacity-0 group-hover:opacity-100 transition-opacity text-sm tracking-wide bg-background/90 text-foreground px-4 py-2 rounded">
-                  {t.products.quickView}
-                </span>
-              </div>
-            </div>
-            <div className="p-4 flex items-start justify-between">
-              <div>
-                <h3 className="font-serif text-lg text-foreground">{product.name[lang]}</h3>
-                <button className="text-xs text-primary underline underline-offset-2 mt-1 hover:opacity-80 transition-opacity">
-                  {t.products.viewDetails}
-                </button>
-              </div>
-              <span className="text-sm text-muted-foreground">${product.price}</span>
-            </div>
-          </div>
-        ))}
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {filtered.map((p, i) => (
+            <ProductCard key={p.id} product={p} index={i} />
+          ))}
+        </div>
+
+        {filtered.length === 0 && (
+          <p className="text-center text-muted-foreground mt-12">
+            {t('products.noResults')}
+          </p>
+        )}
       </div>
-    </div>
+    </section>
   );
 };
 

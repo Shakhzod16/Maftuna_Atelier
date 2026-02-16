@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "marketplace": "Shops",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Women's Tailor — Modern & National Harmony",
+    "subtitle": "Elegance woven with beauty. We create garments with love for you.",
+    "cta_products": "Products",
+    "cta_contact": "Contact"
+  },
+  "features": {
+    "title": "Why Choose Us?",
+    "national": "National & Modern Fusion",
+    "national_desc": "Garments that blend traditional patterns with modern style.",
+    "custom": "Custom Tailoring",
+    "custom_desc": "Every piece is tailored to your exact measurements.",
+    "handmade": "Handmade Details",
+    "handmade_desc": "Each stitch is crafted with delicate hand labor.",
+    "individual": "Individual Approach",
+    "individual_desc": "Personal attention and care for every client."
+  },
+  "products": {
+    "title": "Products",
+    "all": "All",
+    "national": "National",
+    "dresses": "Dresses",
+    "modern": "Modern",
+    "custom_cat": "Custom",
+    "search": "Search...",
+    "sort": "Sort",
+    "sort_default": "Default",
+    "sort_price_asc": "Price: Low → High",
+    "sort_price_desc": "Price: High → Low",
+    "detail": "Details",
+    "price_label": "UZS"
+  },
+  "marketplace": {
+    "title": "Find Us in Stores",
+    "subtitle": "You can also purchase our products from these marketplaces.",
+    "visit": "Visit Store"
+  },
+  "about": {
+    "title": "About Us",
+    "text": "Maftuna Atelier is a tailoring workshop specializing in modern and national women's clothing. We prepare each garment with love and skill, blending traditional patterns with modern style.",
+    "experience": "Experience",
+    "experience_val": "5+ years",
+    "custom_orders": "Orders",
+    "custom_orders_val": "500+",
+    "handmade_work": "Handmade",
+    "handmade_work_val": "100%"
+  },
+  "contact": {
+    "title": "Contact",
+    "phone": "Phone",
+    "telegram": "Telegram",
+    "instagram": "Instagram",
+    "email": "Email",
+    "address": "Address",
+    "address_val": "Bukhara region, Romitan district, Gazli MFY, Amir Temur street",
+    "map": "View on Map",
+    "form_name": "Your Name",
+    "form_phone": "Your Phone",
+    "form_message": "Your Message",
+    "form_send": "Send",
+    "form_success": "Message sent successfully!"
+  },
+  "footer": {
+    "desc": "A tailoring workshop specializing in modern and national women's clothing.",
+    "links": "Pages",
+    "social": "Social Media"
+  }
+}
