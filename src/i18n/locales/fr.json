@@ -1,76 +1,80 @@
 {
-  "nav": {
-    "home": "Accueil",
-    "products": "Produits",
-    "marketplace": "Boutiques",
-    "about": "À propos",
-    "contact": "Contact"
-  },
-  "hero": {
-    "title": "Couturière — Harmonie du moderne et du national",
-    "subtitle": "L'élégance tissée de beauté. Nous créons des vêtements avec amour pour vous.",
-    "cta_products": "Produits",
-    "cta_contact": "Contact"
-  },
-  "features": {
-    "title": "Pourquoi nous ?",
-    "national": "Fusion nationale et moderne",
-    "national_desc": "Des vêtements alliant motifs traditionnels et style moderne.",
-    "custom": "Couture sur mesure",
-    "custom_desc": "Chaque pièce est confectionnée selon vos mesures.",
-    "handmade": "Détails faits main",
-    "handmade_desc": "Chaque couture est réalisée avec un travail artisanal délicat.",
-    "individual": "Approche individuelle",
-    "individual_desc": "Attention personnelle et soin pour chaque cliente."
-  },
-  "products": {
-    "title": "Produits",
-    "all": "Tous",
-    "national": "Nationaux",
-    "dresses": "Robes",
-    "modern": "Modernes",
-    "custom_cat": "Sur mesure",
-    "search": "Rechercher...",
-    "sort": "Trier",
-    "sort_default": "Par défaut",
-    "sort_price_asc": "Prix : croissant",
-    "sort_price_desc": "Prix : décroissant",
-    "detail": "Détails",
-    "price_label": "UZS"
-  },
-  "marketplace": {
-    "title": "Trouvez-nous en boutique",
-    "subtitle": "Nos produits sont également disponibles sur ces plateformes.",
-    "visit": "Visiter"
-  },
-  "about": {
-    "title": "À propos",
-    "text": "Maftuna Atelier est un atelier de couture spécialisé dans les vêtements féminins modernes et nationaux. Nous préparons chaque vêtement avec amour et savoir-faire.",
-    "experience": "Expérience",
-    "experience_val": "5+ ans",
-    "custom_orders": "Commandes",
-    "custom_orders_val": "500+",
-    "handmade_work": "Fait main",
-    "handmade_work_val": "100%"
-  },
-  "contact": {
-    "title": "Contact",
-    "phone": "Téléphone",
-    "telegram": "Telegram",
-    "instagram": "Instagram",
-    "email": "E-mail",
-    "address": "Adresse",
-    "address_val": "Région de Boukhara, district de Romitan, MFY Gazli, rue Amir Temur",
-    "map": "Voir sur la carte",
-    "form_name": "Votre nom",
-    "form_phone": "Votre téléphone",
-    "form_message": "Votre message",
-    "form_send": "Envoyer",
-    "form_success": "Message envoyé avec succès !"
-  },
-  "footer": {
-    "desc": "Atelier de couture spécialisé dans les vêtements féminins modernes et nationaux.",
-    "links": "Pages",
-    "social": "Réseaux sociaux"
-  }
+	"nav": {
+		"home": "Accueil",
+		"products": "Produits",
+		"marketplace": "Boutiques",
+		"about": "À propos",
+		"contact": "Contact"
+	},
+	"hero": {
+		"title": "Couturière — Harmonie du moderne et du national",
+		"subtitle": "L'élégance tissée de beauté. Nous créons des vêtements avec amour pour vous.",
+		"cta_products": "Produits",
+		"cta_contact": "Contact"
+	},
+	"features": {
+		"title": "Pourquoi nous ?",
+		"national": "Fusion nationale et moderne",
+		"national_desc": "Des vêtements alliant motifs traditionnels et style moderne.",
+		"custom": "Couture sur mesure",
+		"custom_desc": "Chaque pièce est confectionnée selon vos mesures.",
+		"handmade": "Détails faits main",
+		"handmade_desc": "Chaque couture est réalisée avec un travail artisanal délicat.",
+		"individual": "Approche individuelle",
+		"individual_desc": "Attention personnelle et soin pour chaque cliente."
+	},
+	"products": {
+		"title": "Produits",
+		"search": "Rechercher...",
+		"sort": "Trier",
+		"sort_default": "Par défaut",
+		"sort_price_asc": "Prix : croissant",
+		"sort_price_desc": "Prix : décroissant",
+		"detail": "Détails",
+		"price_label": "UZS",
+		"noResults": "Aucun résultat trouvé",
+
+		"categories": {
+			"all": "Tous",
+			"national": "Nationaux",
+			"dresses": "Robes",
+			"modern": "Modernes",
+			"custom": "Sur mesure"
+		}
+	},
+	"marketplace": {
+		"title": "Trouvez-nous en boutique",
+		"subtitle": "Nos produits sont également disponibles sur ces plateformes.",
+		"visit": "Visiter"
+	},
+	"about": {
+		"title": "À propos",
+		"text": "Maftuna Atelier est un atelier de couture spécialisé dans les vêtements féminins modernes et nationaux. Nous préparons chaque vêtement avec amour et savoir-faire.",
+		"experience": "Expérience",
+		"experience_val": "5+ ans",
+		"custom_orders": "Commandes",
+		"custom_orders_val": "500+",
+		"handmade_work": "Fait main",
+		"handmade_work_val": "100%"
+	},
+	"contact": {
+		"title": "Contact",
+		"phone": "Téléphone",
+		"telegram": "Telegram",
+		"instagram": "Instagram",
+		"email": "E-mail",
+		"address": "Adresse",
+		"address_val": "Région de Boukhara, district de Romitan, MFY Gazli, rue Amir Temur",
+		"map": "Voir sur la carte",
+		"form_name": "Votre nom",
+		"form_phone": "Votre téléphone",
+		"form_message": "Votre message",
+		"form_send": "Envoyer",
+		"form_success": "Message envoyé avec succès !"
+	},
+	"footer": {
+		"desc": "Atelier de couture spécialisé dans les vêtements féminins modernes et nationaux.",
+		"links": "Pages",
+		"social": "Réseaux sociaux"
+	}
 }

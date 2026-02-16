@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Sparkles, Scissors, Crown } from 'lucide-react';
 
-// ✅ Rasmni assets dan oling (nomini o'zingizniki bilan almashtiring)
+// ✅ Rasm
 import aboutImage from '/src/assets/hero-fashion.jpg';
 
 const About = () => {
@@ -52,10 +52,8 @@ const About = () => {
 								))}
 							</div>
 
-							{/* small divider */}
+							{/* ✅ divider qolsin desangiz qoldiring, xohlasangiz o'chirsa ham bo'ladi */}
 							<div className='relative mt-8 h-px w-full bg-border' />
-
-							<p className='relative mt-6 text-sm text-muted-foreground'>{t('about.note')}</p>
 						</div>
 					</motion.div>
 
@@ -67,7 +65,6 @@ const About = () => {
 						transition={{ duration: 0.55 }}
 						className='order-1 lg:order-2 flex justify-center'>
 						<div className='w-full max-w-sm'>
-							{/* outer frame */}
 							<div className='relative rounded-[2rem] p-[1px] bg-gradient-to-br from-accent/50 to-primary/30 shadow-elegant'>
 								<div className='relative rounded-[2rem] overflow-hidden bg-secondary' style={{ aspectRatio: '9/16' }}>
 									<img
@@ -78,25 +75,10 @@ const About = () => {
 										draggable={false}
 									/>
 
-									{/* overlay */}
-									<div className='absolute inset-0 bg-gradient-to-t from-black/35 via-black/0 to-black/0' />
-
-									{/* tag */}
-									<div className='absolute top-4 left-4 inline-flex items-center gap-2 rounded-full bg-white/80 backdrop-blur px-4 py-2 text-xs font-medium text-foreground border border-black/5'>
-										<span className='h-2 w-2 rounded-full bg-accent' />
-										{t('about.badge')}
-									</div>
-
-									{/* bottom caption */}
-									<div className='absolute bottom-4 left-4 right-4'>
-										<p className='text-white/95 font-heading text-lg font-semibold'>{t('about.imageTitle')}</p>
-										<p className='text-white/75 text-sm mt-1'>{t('about.imageSubtitle')}</p>
-									</div>
+									{/* overlay (qoladi — chiroyli ko‘rinadi) */}
+									<div className='absolute inset-0 bg-gradient-to-t from-black/25 via-black/0 to-black/0' />
 								</div>
 							</div>
-
-							{/* small hint */}
-							<p className='text-center text-xs text-muted-foreground mt-4'>{t('about.photoNote')}</p>
 						</div>
 					</motion.div>
 				</div>
